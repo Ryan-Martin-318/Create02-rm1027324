@@ -40,3 +40,7 @@ WHERE v.platform <> 'mobile' AND v.metacritic_score BETWEEN 85 AND 100
 
 --A car dealer needs to know the make, model, year, and fuel type of all cars that have a model starting with "C". The list should be sorted alphabetically by make and model with the newest models listed first.
 --Your code below this line
+SELECT make, model, year, fuel_type
+FROM car AS c
+WHERE c.model LIKE 'C%'
+ORDER BY c.make, c.model DESC;
